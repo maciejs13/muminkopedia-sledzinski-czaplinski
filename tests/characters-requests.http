@@ -1,0 +1,33 @@
+@baseUrl = http://localhost:3000/api/characters
+
+### GET all characters
+GET {{baseUrl}}
+Content-Type: application/json
+
+### POST create new character
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Muminek Testowy",
+  "description": "Opis Muminka Testowego",
+  "species": "Muminek",
+  "isHibernating": false
+}
+
+### GET single character
+GET {{baseUrl}}/:id
+Content-Type: application/json
+
+### PUT update character
+PUT {{baseUrl}}/:id
+Content-Type: application/json
+
+{
+  "species": "Inny",
+  "isHibernating": true
+}
+
+### DELETE character
+DELETE {{baseUrl}}/:id
+Content-Type: application/json

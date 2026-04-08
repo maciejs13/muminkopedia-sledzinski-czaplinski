@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:3000/api/artifacts
+
+### GET all artifacts
+GET {{baseUrl}}
+Content-Type: application/json
+
+### POST create new artifact
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "Harmonijka Testowa",
+  "description": "Magiczna harmonijka",
+  "owner": "replace_with_character_id"
+}
+
+### GET single artifact
+GET {{baseUrl}}/:id
+Content-Type: application/json
+
+### PUT update artifact
+PUT {{baseUrl}}/:id
+Content-Type: application/json
+
+{
+  "description": "Zmieniony opis harmonijki"
+}
+
+### DELETE artifact
+DELETE {{baseUrl}}/:id
+Content-Type: application/json

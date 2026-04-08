@@ -25,7 +25,7 @@ export class CharacterController {
     async getById(req: Request, res: Response) {
         try {
             const idParam = req.params.id;
-            // wymuszenie, że id będzie stringiem
+
             const id = Array.isArray(idParam) ? idParam[0] : idParam;
             if (!id) return res.status(400).json({error: "ID is required"});
 
