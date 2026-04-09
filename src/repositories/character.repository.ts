@@ -1,6 +1,7 @@
 import { CharacterModel } from "../models/Character";
 
 export class CharacterRepository {
+
     create(data: any) {
         return CharacterModel.create(data);
     }
@@ -10,10 +11,19 @@ export class CharacterRepository {
     }
 
     findById(id: string) {
-        return CharacterModel.findById(id).populate("bestFriend");
+        return CharacterModel.findById(id)
+            .populate("bestFriend");
+    }
+
+    update(id: string, data: any) {
+        return CharacterModel.findByIdAndUpdate(
+            id,
+            data,
+            { new: true }
+        );
     }
 
     delete(id: string) {
-        return CharacterModel.findByIdAndDelete(id)
+        return CharacterModel.findByIdAndDelete(id);
     }
 }

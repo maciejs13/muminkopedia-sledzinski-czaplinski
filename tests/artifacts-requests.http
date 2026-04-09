@@ -11,15 +11,15 @@ Content-Type: application/json
 {
   "name": "Harmonijka Testowa",
   "description": "Magiczna harmonijka",
-  "owner": "replace_with_character_id"
+  "owner": "69d7730a4e6d01df631b4754"
 }
 
 ### GET single artifact
-GET {{baseUrl}}/:id
+GET {{baseUrl}}/69d7790d233f66acb4df5f3e
 Content-Type: application/json
 
 ### PUT update artifact
-PUT {{baseUrl}}/:id
+PUT {{baseUrl}}/69d7790d233f66acb4df5f3e
 Content-Type: application/json
 
 {
@@ -27,5 +27,5 @@ Content-Type: application/json
 }
 
 ### DELETE artifact
-DELETE {{baseUrl}}/:id
+DELETE {{baseUrl}}/69d7790d233f66acb4df5f3e
 Content-Type: application/json

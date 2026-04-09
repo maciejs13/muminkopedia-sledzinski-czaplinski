@@ -2,11 +2,14 @@ import { CharacterRepository } from "../repositories/character.repository";
 import { ArtifactRepository } from "../repositories/artifact.repository";
 
 export class CharacterService {
+
     private repo = new CharacterRepository();
     private artifactRepo = new ArtifactRepository();
 
     async create(data: any) {
-        if (!data.name) throw new Error("name is required");
+        if (!data.name)
+            throw new Error("name is required");
+
         return this.repo.create(data);
     }
 
@@ -16,6 +19,10 @@ export class CharacterService {
 
     async getById(id: string) {
         return this.repo.findById(id);
+    }
+
+    async update(id: string, data: any) {
+        return this.repo.update(id, data);
     }
 
     async delete(id: string) {

@@ -52,4 +52,39 @@ export class CharacterController {
             res.status(500).json({error: err.message});
         }
     }
+
+
+    async update(req: Request, res: Response) {
+        try {
+
+            const idParam = req.params.id;
+
+            const id = Array.isArray(idParam)
+                ? idParam[0]
+                : idParam;
+
+            if (!id)
+                return res.status(400).json({
+                    error: "ID is required"
+                });
+
+            const updated =
+                await this.service.update(id, req.body);
+
+            if (!updated)
+                return res.status(404).json({
+                    error: "Character not found"
+                });
+
+            res.json(updated);
+
+        } catch (err: any) {
+
+            res.status(500).json({
+                error: err.message
+            });
+
+        }
+    }
+
 }

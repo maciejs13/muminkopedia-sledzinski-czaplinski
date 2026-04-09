@@ -16,11 +16,11 @@ Content-Type: application/json
 }
 
 ### GET single character
-GET {{baseUrl}}/:id
+GET {{baseUrl}}/69d77907233f66acb4df5f3d
 Content-Type: application/json
 
 ### PUT update character
-PUT {{baseUrl}}/:id
+PUT {{baseUrl}}/69d77aaa9e2c7aad6d6da325
 Content-Type: application/json
 
 {
@@ -29,5 +29,5 @@ Content-Type: application/json
 }
 
 ### DELETE character
-DELETE {{baseUrl}}/:id
+DELETE {{baseUrl}}/69d7730a4e6d01df631b4754
 Content-Type: application/json

@@ -8,5 +8,6 @@ router.post("/", (req, res) => characterController.create(req, res));
 router.get("/", (req, res) => characterController.getAll(req, res));
 router.get("/:id", (req, res) => characterController.getById(req, res));
 router.delete("/:id", (req, res) => characterController.delete(req, res));
+router.put("/:id", (req, res) => characterController.update(req, res));
 
 export default router;
